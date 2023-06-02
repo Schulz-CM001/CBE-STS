@@ -14,11 +14,46 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  transition: background-color 1s ease-in-out;
 }
-
-#button {
+/*
+button {
   font-family: monospace;
   font-size: 3rem;
   background-color: white;
   border: 5px, solid black;
+}
+*/
+
+.dark-mode {
+  background-color: black;
+}
+/*
+button.dark-mode {
+  border: 5px, solid white;
+  background-color: darkgrey;
+  color: white;
+  box-shadow: 0px 2px 15px 5px yellow;
+}
+*/
+
+button {
+  font-size: 1.5rem;
+  background-color: #ffffff;
+  border: 10px solid black;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button.dark-btn {
+  background-color: #201a1a;
+  border: 10px solid white;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 15px 5px rgba(255, 255, 0);
 }
