@@ -15,16 +15,16 @@ function checkFunction() {
   const checkBoxTwo = document.getElementById("cheap");
   const checkBoxThree = document.getElementById("good");
 
-  if (checkBoxOne.checked == false && checkBoxThree.checked == false) {
+  if (checkBoxOne.checked === false && checkBoxThree.checked === false) {
     checkBoxTwo.checked = true;
   }
-  if (checkBoxOne.checked == true && checkBoxThree.checked == true) {
+  if (checkBoxOne.checked === true && checkBoxThree.checked === true) {
     checkBoxTwo.checked = false;
   }
-  if (checkBoxOne.checked == true && checkBoxTwo.checked == true) {
+  if (checkBoxOne.checked === true && checkBoxTwo.checked === true) {
     checkBoxThree.checked = false;
   }
-  if (checkBoxTwo.checked == true && checkBoxThree.checked == true) {
+  if (checkBoxTwo.checked === true && checkBoxThree.checked === true) {
     checkBoxOne.checked = false;
   }
 }
