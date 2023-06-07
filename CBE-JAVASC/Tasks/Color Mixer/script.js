@@ -1,24 +1,32 @@
 "use strict";
 
-// Jimmy's Code//
+const redSlider = document.getElementById("redSlider");
+const greenSlider = document.getElementById("greenSlider");
+const blueSlider = document.getElementById("blueSlider");
 
-const redSlider = document.querySelector("#redSlider");
-const greenSlider = document.querySelector("#greenSlider");
-const blueSlider = document.querySelector("#blueSlider");
+const header = document.querySelector("#header");
 
-const root = document.querySelector(":root");
+document.body.style.backgroundColor = "dodgerblue";
+
+window.addEventListener("load", () => {
+  document.body, (style.backgroundColor = "dodgerblue");
+});
 
 function changeBackgroundColor() {
-  const red = redSlider.value;
-  const green = greenSlider.value;
-  const blue = blueSlider.value;
+  const red = parseInt(redSlider.value).toString(16).padStart(2, "0");
+  const green = parseInt(greenSlider.value).toString(16).padStart(2, "0");
+  const blue = parseInt(blueSlider.value).toString(16).padStart(2, "0");
 
-  const color = "rbg" + "(" + red + "," + green + "," + blue + ")";
+  const color = "#${red}${green}${blue}";
+  //"rbg" + "(" + red + "," + green + "," + blue + ")";
 
-  root.style.setProperty("...newColor", color);
-  document.querySelector("#hexcode").innerText = color;
-
-  changeBackgroundColor();
-
-  document.body.addEventListener("input", changeBackgroundColor);
+  document.body.style.backGroundColor = color;
 }
+
+document.body.addEventListener("input", changeBackgroundColor);
+
+redSlider.addEventListener("input", changeBackgroundColor);
+greenSlider.addEventListener("input", changeBackgroundColor);
+blueSlider.addEventListener("input", changeBackgroundColor);
+
+changeBackgroundColor();
