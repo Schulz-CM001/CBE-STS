@@ -1,10 +1,16 @@
-*,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: border-box;
 }
-html {
+
+html,
+body {
   height: 100%;
+}
+
+html {
+  font-family: "Roboto", "sans-serif";
+  font-size: 24px;
 }
 
 header {
@@ -13,14 +19,22 @@ header {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  background-color: lightblue;
   margin: 0;
   padding-left: 1rem;
   height: 5rem;
+  background-color: lightgray;
 }
 
 #colorValue {
   font-size: 1rem;
-  padding-right: 2rem;
-  margin-left: 5rem;
+  margin-left: 3rem;
+  padding-right: 1rem;
+}
+
+input[type="range"]#redSlider {
+  accent-color: red;
+}
+
+input[type="range"]#greenSlider {
+  accent-color: green;
 }
