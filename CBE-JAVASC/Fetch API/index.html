@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fetch API</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+<script>
+
+let p = fetch("https://krautipsum.com/api/noun");
+
+let p2 = p.then((response) => {
+    console.log(response.status);
+    console.log(response.ok);
+    return response.json();
+
+});
+p2.then((data) => {
+    console.log(data.noun);
+
+});
+
+
+</script>
+
+
+</html>

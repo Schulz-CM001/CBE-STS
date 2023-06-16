@@ -1,0 +1,139 @@
+                        /* === GLOBAL === */
+:root {
+    --box-sizing: border-box;
+    --font-family: "Roboto", "sans-serif";
+    --primary-color: rgb(237, 146, 232);
+    --secondary-color: rgb(255, 255, 255);
+    --background-gradient: linear-gradient(217deg, rgba(68, 0, 255, 0.605), rgba(41, 17, 89, 0.359) 70.71%),
+        linear-gradient(127deg, rgb(0, 0, 0), rgb(160, 153, 255) 70.71%),
+        linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(75, 113, 237, 0) 70.71%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: var(--box-sizing);
+}
+
+html {
+    font-family: var(--font-family);
+}
+
+body {
+    background: var(--background-gradient);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 15px;
+}
+
+/* === BOX === */
+.box.glow {
+    box-shadow: 1px 1px 20px 20px rgba(255, 170, 251, 0.479);
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    background: rgba(198, 192, 222, 0.062);
+    padding: 40px 45px 60px;
+    border: 2px solid rgb(235, 239, 245);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+/* === HEADER === */
+h1 {
+    color: var(--secondary-color);
+    margin: 10px 0px 15px;
+    font-size: 2rem;
+    color: rgb(217, 135, 213);
+}
+
+/* === FILTER === */
+.radioBtn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    padding: 10px 10px;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+/* === INPUT === */
+.inputAddBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#todoInput {
+    border: 5px solid var(--primary-color);
+    border-radius: 15px;
+    background: var(--secondary-color);
+    height: 40px;
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 20px;
+}
+
+/* === ADD BTN === */
+#addTodoBtn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    margin: 0px 10px 0px;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+/* === REMOVE BTN === */
+#removeDoneBtn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+/* === TODO LIST === */
+.todoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    line-height: 2;
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/* === RESPONSIVE DESIGN === */
+/* MEDIA QUERIES */
