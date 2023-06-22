@@ -46,18 +46,17 @@
   </script>
   <script>
 const currentDate = Vue.createApp({
-        methods: { {
+        methods: { 
             callFunction: function () {
             var currentDate = new Date();
             console.log(currentDate);
 
             var currentDateWithFormat = new Date().toJSON.slice(0,10).replace(/-/g,'/');
             console.log(currentDatewithFormat);
-            };
+            },
         }
-    }).mount('#time');
-
-
+    }).mount('#times');
+  
   </script>
   </body>
 </html>

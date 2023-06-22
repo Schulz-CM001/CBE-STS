@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue example</title>
+</head>
+<body>
+    <div id="app">
+    <p v-text="vTextExampleText"></p>
+    <p v-html="vHTMLExampleText"></p>
+    <p v-once>{{vTextExampleText}}</p>
+    <p v-pre>{{vTextExampleText}}</p>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                vTextExampleText: 'Hallo Welt',
+                vHTMLExampleText: "<h1>Tolle Headline<h1><p>Alter Schwede</p>"
+            };
+            },
+    }).mount("#app");
+
+</script>
+</body>
+</html>
