@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Instance Sample</title>
+</head>
+<body>
+    <div id="app">
+    <p>Hello {{ userName }} how are you? </p>
+    <p>Your name has {{ userName.length }} characters.</p>
+
+    <script src="https://unpkg.com/vue@next"></script>
+<script>
+    const app = Vue.createApp({
+        data() {
+            return {
+                userName:"Joe Gregory",
+            };
+        },
+    }).mount("#app");
+
+    console.log(app.userName);
+    
+    </script>
+</body>
+</html>
