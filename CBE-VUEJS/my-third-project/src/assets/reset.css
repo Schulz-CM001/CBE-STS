@@ -63,6 +63,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="search"] {
+  appearance: none;
   -webkit-appearance: none;
 } /*--- for Safari (add/remove types as needed) ---*/
 button {

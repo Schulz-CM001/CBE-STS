@@ -1,19 +1,18 @@
 <template>
-  <MyFirstComponent />
-
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <LayoutHeader />
+  <BookList />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import MyFirstComponent from "@/components/MyFirstComponent.vue";
+import LayoutHeader from "./components/LayoutHeader.vue";
+import BookList from "./components/BookList.vue";
 
 export default {
-  name: "App",
   components: {
-    HelloWorld,
-    MyFirstComponent,
+    LayoutHeader,
+    BookList,
   },
 };
 </script>
+
+<style></style>
